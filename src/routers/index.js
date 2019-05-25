@@ -4,15 +4,15 @@ const products = require('./products');
 
 routers.get('/', (req, res) => {
   res.json({
-    name: "cloud functions: " +req.originalUrl
-  })
+    name: `Hello :${req.originalUrl}`
+  });
 });
 
 routers.post('/', (req, res) => {
   res.json({
-    name: "cloud functions: " +req.originalUrl,
+    name: `Hello :${req.originalUrl}`,
     body: req.body
-  })
+  });
 });
 
 routers.use('/products', products);
