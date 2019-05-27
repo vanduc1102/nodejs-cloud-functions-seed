@@ -8,25 +8,25 @@ router.use((req, res, next) => {
   next();
 });
 
-router.post('/', async(req, res) => {
+router.post('/', async (req, res) => {
   res.json(await productService.save(req.body));
 });
 
-router.put('/:id', async(req, res) => {
+router.put('/:id', async (req, res) => {
   const { id } = req.params;
   res.json(await productService.edit(id, req.body));
 });
 
-router.get('/:id', async(req, res) => {
+router.get('/:id', async (req, res) => {
   const { id } = req.params;
-  res.json(await productService.findByIds(id));
+  res.json(await productService.findByIds([id]));
 });
 
-router.get('/', async(req, res) => {
+router.get('/', async (req, res) => {
   res.json(await productService.search());
 });
 
-router.delete('/:id', async(req, res) => {
+router.delete('/:id', async (req, res) => {
   const { id } = req.params;
   res.json(await productService.remove(id));
 });
