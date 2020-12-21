@@ -11,7 +11,7 @@ async function save(requestBody) {
   if (!Array.isArray(requestBody)) {
     products = [requestBody];
   }
-  const productEntities = products.map(p => {
+  const productEntities = products.map((p) => {
     const key = datastore.key([PRODUCT_KIND]);
     return {
       key,
@@ -44,9 +44,7 @@ async function search() {
 }
 
 async function findByIds(productIds) {
-  const keys = productIds.map(productId =>
-    datastore.key([PRODUCT_KIND, datastore.int(productId)])
-  );
+  const keys = productIds.map(productId => datastore.key([PRODUCT_KIND, datastore.int(productId)]));
   const [products] = await datastore.get(keys);
   return addProductKey(products);
 }
@@ -63,7 +61,7 @@ function addProductKey(products) {
 
 async function remove(productId) {
   const key = datastore.key([PRODUCT_KIND, datastore.int(productId)]);
-  await datastore.delete(key);
+  datastore.delete(key);
   console.log(`Product ${productId} deleted successfully.`);
   return productId;
 }

@@ -1,7 +1,7 @@
 # Deploy to GCP
 
 ```
-gcloud functions deploy nodejs-cloud-functions-seed --runtime nodejs10 --trigger-http --entry-point app
+gcloud functions deploy nodejs-cloud-functions-seed --runtime nodejs12 --trigger-http --entry-point app --allow-unauthenticated
 ```
 
 # Work on Local
