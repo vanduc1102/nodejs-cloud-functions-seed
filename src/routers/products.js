@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const DEBUG = require('debug')(__filename.slice(__dirname.length + 1, -3));
-const productService = require('../services/product.service');
+const productService = require('../services/product');
 const { runAsyncWrapper } = require('../middleware');
 
 router.use((req, res, next) => {

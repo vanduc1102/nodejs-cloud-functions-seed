@@ -1,6 +1,6 @@
 module.exports = {
   'extends': 'airbnb-base',
-  'plugins':['jasmine'],
+  'plugins': ['jasmine'],
   "env": {
     "node": true,
     "jest": true,
@@ -21,9 +21,10 @@ module.exports = {
         'semi': ['error', 'always', { 'omitLastInOneLineBlock': true }],
         'indent': [2, 2],
         'no-tabs': 1,
-        'no-underscore-dangle':0,
+        'no-underscore-dangle': 0,
         'no-use-before-define': ["error", { "functions": false }],
-        "no-console":0
+        "no-console": 0,
+        'max-len': 0
       }
     }
   ]
