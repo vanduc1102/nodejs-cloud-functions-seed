@@ -16,6 +16,12 @@ app.use(express.json());
 
 app.use(routers);
 
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
+  console.error(__filename, err.stack);
+  res.status(500).send('Uff!');
+});
+
 app.listen(port, () => console.log(`App listening on port ${port}!`));
 
 module.exports = { app };

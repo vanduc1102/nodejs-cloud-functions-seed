@@ -22,7 +22,8 @@ module.exports = {
         'indent': [2, 2],
         'no-tabs': 1,
         'no-underscore-dangle':0,
-        'no-use-before-define': ["error", { "functions": false }]
+        'no-use-before-define': ["error", { "functions": false }],
+        "no-console":0
       }
     }
   ]
