@@ -7,3 +7,6 @@ README.md
 .eslintrc.js
 .editorconfig
 .gitignore
+README.md
+coverage
+test

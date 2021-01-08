@@ -1,10 +1,8 @@
+
 const { Datastore } = require('@google-cloud/datastore');
+const datastore = require('../database');
 
 const PRODUCT_KIND = 'Product';
-
-const datastore = new Datastore({
-  projectId: process.env.GCP_PROJECT
-});
 
 async function save(requestBody) {
   let products = requestBody;
